@@ -1,3 +1,9 @@
+<!--
+ * @Author: yuan.zhou
+ * @Date: 2021-03-06 13:50:05
+ * @Descripton: 
+ * @LastEditTime: 2021-04-11 23:50:37
+-->
 <template>
   <div :class="{'has-logo':showLogo}">
     <logo v-if="showLogo" :collapse="isCollapse" />
@@ -31,6 +37,7 @@ export default {
       'sidebar'
     ]),
     routes() {
+      console.log('this.$router', this.$router);
       return this.$router.options.routes
     },
     activeMenu() {
